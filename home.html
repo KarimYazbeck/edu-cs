@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="home.css" type="text/css" />
+  </head>
+
+  <body>
+    <section class="login-section" id="login-section">
+      <!-- LOGIN BOX -->
+      <div class="login-box">
+        <h2>Login</h2>
+        <form action="storage.html">
+          <div class="user-box">
+            <input
+              type="text"
+              name=""
+              required=""
+              id="username_input"
+              autocomplete="off"
+            />
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input
+              type="password"
+              name=""
+              required=""
+              id="password_input"
+              autocomplete="off"
+            />
+            <label>Password</label>
+          </div>
+
+          <a href="#" id="submit">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+          <!-- <input type="submit" id="temp_butt" />  -->
+          <!-- hayde l input, hon fi error kel ma 7ota it skips all login -->
+
+          <span class="verification" id="verification"></span>
+        </form>
+      </div>
+      <!-- END OF LOGIN BOX -->
+    </section>
+
+    <section class="home-section" id="home-section">
+      <!--
+      <nav>
+        <ul>
+          <li class="logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-terminal-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146z"
+              />
+            </svg>
+            edu.cs
+          </li>
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="storage.html">Assignment</a></li>
+          <li><a href="#" id="logOut">Log Out</a></li>
+          <li style="float: right"><a href="settings.asp">Settings</a></li>
+        </ul>
+      </nav> -->
+
+      <nav
+        class="navbar navbar-expand-md sticky-top navbar-dark"
+        style="background-color: rgba(0, 0, 0, 0.5)"
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand logo" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-terminal-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146z"
+              />
+            </svg>
+            edu.cs
+          </a>
+
+          <ul class="navbar-nav mr-auto mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link active" href="home.html"
+                >Home <span class="sr-only"></span
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="assignments.html">Assignments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="logOut">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="body-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <div class="box greeting">
+                <img
+                  src="malePic.png"
+                  width="70px"
+                  style="margin-right: 10px"
+                  id="gender_picture"
+                  alt="Profile Picture"
+                />
+                <div>
+                  <h3 id="greeting"></h3>
+                  <h6 id="profession"></h6>
+                </div>
+              </div>
+            </div>
+
+            <!--
+            <div class="col-sm-7 col-md-4">
+              <div class="box" style="min-width: 100px">
+                <div style="overflow: auto">
+                  <img
+                    src="femalePic2.png"
+                    width="70px"
+                    style="float: left; margin-right: 20px"
+                    alt="Male/Female default profile picture"
+                    id="gender_picture"
+                  />
+                  <h3 style="width: 200px; float: left" id="greeting"></h3>
+                  <h6 id="profession"></h6>
+                </div>
+              </div>
+            </div>
+
+          -->
+
+            <div class="col-sm-6 col-md-8">
+              <div class="box">
+                <span>Average :</span>
+                <span style="font-size: 23px" id="average-span"></span>
+                <span style="font-size: 23px">/100</span>
+                <!-- <meter min="0" max="100" value="69" id="meter"></meter>  -->
+                <div
+                  class="progress"
+                  style="height: 15px; opacity: 50%; margin-top: 5px"
+                  id="progress_taba3_grade"
+                >
+                  <div
+                    class="progress-bar"
+                    aria-valuenow="73"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    role="progressbar"
+                    style="width: 73%"
+                    id="grade_bar"
+                  >
+                    <span id="grade_bar_span"></span>
+                    <!-- bg-danger -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRYING TO MAKE THE TABLE IN BOOTSTRAP-->
+        <div class="container" style="margin-top: 30px">
+          <div class="box_course_1">
+            <div class="row">
+              <div class="col-5 col-md-5">
+                <div>Course Name</div>
+              </div>
+              <div class="col-4 col-md-5">
+                <div>Teacher</div>
+              </div>
+              <div class="col-3 col-md-2">
+                <div>Grade</div>
+              </div>
+            </div>
+          </div>
+          <!-- course table inside -->
+          <div class="box_course_2">
+            <div class="row">
+              <div class="col-5 col-md-5">
+                <div>Web Design</div>
+              </div>
+              <div class="col-4 col-md-5">
+                <div>Dr Hisham</div>
+              </div>
+              <div class="col-3 col-md-2">
+                <div>100/100</div>
+              </div>
+            </div>
+            <!-- ROW 2 -->
+            <div class="row">
+              <div class="col-5 col-md-5">
+                <div>Object Oriented Programming</div>
+              </div>
+              <div class="col-4 col-md-5">
+                <div>Dr Michelle</div>
+              </div>
+              <div class="col-3 col-md-2">
+                <div>72/100</div>
+              </div>
+            </div>
+            <!-- ROW 3 -->
+            <div class="row">
+              <div class="col-5 col-md-5">
+                <div>Computer Architecture</div>
+              </div>
+              <div class="col-4 col-md-5">
+                <div>Dr Gilbert</div>
+              </div>
+              <div class="col-3 col-md-2">
+                <div>32/100</div>
+              </div>
+            </div>
+
+            <!-- ROW 4 -->
+            <div class="row">
+              <div class="col-5 col-md-5">
+                <div>C++</div>
+              </div>
+              <div class="col-4 col-md-5">
+                <div>Dr Ronald</div>
+              </div>
+              <div class="col-3 col-md-2">
+                <div>90/100</div>
+              </div>
+            </div>
+            <!-- END OF THE TABLE -->
+          </div>
+        </div>
+
+        <!-- TEXT AREA FOR NOTES  -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="box" style="margin-top: 20px; padding-bottom: 10px">
+                <h3>Notes</h3>
+                <textarea
+                  placeholder="Enter notes here..."
+                  spellcheck="false"
+                ></textarea>
+              </div>
+            </div>
+            <div class="col-sm-7" style="margin-bottom: 10px">
+              <div class="box" style="margin-top: 30px">
+                <div>
+                  <span class="info-span">Username : </span>
+                  <span id="username-span"></span>
+                </div>
+                <div>
+                  <span class="info-span">Email : </span>
+                  <span id="email-span"></span>
+                </div>
+                <div>
+                  <span id="info-span">Level : </span>
+                  <span id="level-span"></span>
+                  <span>/10</span>
+                  <div
+                    class="progress"
+                    style="margin-top: 30px; opacity: 50%"
+                    id="level_bar"
+                  >
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIGN UP FOR NEW USERS -->
+
+        <div class="container">
+          <div class="box" style="margin-top: 70px; margin-bottom: 30px">
+            <form>
+              <h3 style="margin-bottom: 20px">Sign Up</h3>
+
+              <div class="row">
+                <div class="col-4">
+                  <input
+                    placeholder="First Name"
+                    class="form-input"
+                    id="form-fname"
+                    required
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    placeholder="Last Name"
+                    class="form-input"
+                    id="form-lname"
+                    required
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    placeholder="Email Address"
+                    type="email"
+                    class="form-input"
+                    required
+                    id="form-email"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    class="form-input"
+                    required
+                    id="form-username"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    class="form-input"
+                    id="form-pass"
+                    required
+                  />
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-eye-fill"
+                    viewBox="0 0 16 16"
+                    id="eye_pass"
+                  >
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                    <path
+                      d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"
+                    />
+                  </svg>
+                </div>
+                <!--
+                <div class="col-4">
+                  <input
+                    type="password"
+                    placeholder="Confirm Password"
+                    class="form-input"
+                    required
+                  />
+                </div> -->
+              </div>
+              <div class="row" style="position: relative; z-index: 3">
+                <div class="col-4">
+                  <label>
+                    <input
+                      type="radio"
+                      checked
+                      class="form-radio"
+                      id="form-radio-student"
+                      name="form-radio"
+                    />
+                    Student
+                  </label>
+                </div>
+                <div class="col-4">
+                  <label>
+                    <input
+                      type="radio"
+                      checked
+                      class="form-radio"
+                      id="form-sex-male"
+                      name="form-radio-sex"
+                    />
+                    Male
+                  </label>
+                </div>
+                <!--
+                <div class="col-4">
+                  <input
+                    type="submit"
+                    value="Submit"
+                    class="form-submit"
+                    id="form-submit"
+                  />
+                </div>  -->
+              </div>
+
+              <!-- LAST ROW -->
+              <div class="row" style="margin-top: -20px">
+                <div class="col-4">
+                  <label>
+                    <input
+                      type="radio"
+                      class="form-radio"
+                      id="form-radio-teacher"
+                      name="form-radio"
+                    />
+                    Teacher
+                  </label>
+                </div>
+                <div class="col-4">
+                  <label>
+                    <input
+                      type="radio"
+                      class="form-radio"
+                      id="form-sex-female"
+                      name="form-radio-sex"
+                    />
+                    Female
+                  </label>
+                </div>
+                <div class="col-4">
+                  <input
+                    type="submit"
+                    value="Submit"
+                    class="form-submit"
+                    id="form-submit"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container foot-container">
+          <ol>
+            <li class="logo2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-terminal-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146z"
+                />
+              </svg>
+              edu.cs &trade;
+            </li>
+
+            <li>&copy Copyright 2001-2022</li>
+            <li class="rights">&reg All Rights Reserved</li>
+          </ol>
+        </div>
+      </footer>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="home.js"></script>
+  </body>
+</html>
